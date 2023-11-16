@@ -1,0 +1,23 @@
+{
+    "cursos": [
+      {
+        "imagen": "../img/desarrolloSoftware.png",
+        "nombre": "Programación en Python",
+        "tipo": "Desarrollo de Software",
+        "precio": 49.99
+      },
+      {
+        "imagen": "../img/diseñoGrafico.jpeg",
+        "nombre": "Diseño Gráfico Avanzado",
+        "tipo": "Diseño y Creatividad",
+        "precio": 39.99
+      },
+      {
+        "imagen": "../img/inglesNegocios.png",
+        "nombre": "Inglés para Negocios",
+        "tipo": "Idiomas",
+        "precio": 29.99
+      }
+    ]
+  }
+  
