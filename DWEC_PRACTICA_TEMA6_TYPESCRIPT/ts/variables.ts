@@ -21,7 +21,7 @@ cualquiera = 14;
 console.log(cualquiera)
 
 //arrays
-let lenguaje: Array<string> = ["PHP", "JS", "CSS"];
+let lenguaje: Array<any> = ["PHP", "JS", "CSS"];
 let arrayString: string[] = ["yo", "tu"]
 let years: number[] = [23, 24, 25];
 let cualesquiera: any[] = ["aa", 12, 23];
@@ -33,8 +33,8 @@ let profesion: alfanumero = "profesor";
 console.log(profesion)
 
 //tupla
-type tupla = [string, number];
-let persona: tupla = ["jorge", 35]
+type tupla2 = [string, number];
+let persona: tupla2 = ["jorge", 35]
 console.log(persona)
 
 enum color { verde, rojo, amarillo };
@@ -72,6 +72,9 @@ function sumarPorDefecto(valor1: number, valor2: number, valor3: number = 10): n
 }
 console.log(sumarPorDefecto(5, 4));
 console.log(sumarPorDefecto(5, 4, 3));
+
+
+//OBJETOS
 
 class Persona {
     nombre: string;

@@ -61,6 +61,7 @@ function sumarPorDefecto(valor1, valor2, valor3 = 10) {
 }
 console.log(sumarPorDefecto(5, 4));
 console.log(sumarPorDefecto(5, 4, 3));
+//OBJETOS
 class Persona {
     constructor(nombre, edad) {
         this.nombre = nombre;
