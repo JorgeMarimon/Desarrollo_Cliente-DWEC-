@@ -57,10 +57,10 @@ class Employee {
     }
     imprimir() {
         if (this.fechaFinTrabajo) {
-            console.log("El nombre del primer empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Acabó de trabajar en el " + this.fechaFinTrabajo + ".");
+            console.log("El nombre del empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Acabó de trabajar en el " + this.fechaFinTrabajo + ".");
         }
         else {
-            console.log("El nombre del primer empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Sigue en activo.");
+            console.log("El nombre del empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Sigue en activo.");
         }
     }
 }
