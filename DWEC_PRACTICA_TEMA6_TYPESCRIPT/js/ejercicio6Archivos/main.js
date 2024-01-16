@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const almacen_1 = __importDefault(require("./almacen"));
+const almacenNumeros = new almacen_1.default();
+almacenNumeros.agregarElemento(7);
+almacenNumeros.agregarElemento(88);
+almacenNumeros.listarElementos();
+console.log("Elemento en la posición 1:", almacenNumeros.obtenerElemento(0));
+console.log("Elemento en la posición 2:", almacenNumeros.obtenerElemento(1));
+const almacenCoches = new almacen_1.default();
+almacenCoches.agregarElemento("Renault");
+almacenCoches.agregarElemento("Skoda");
+almacenCoches.listarElementos();
+console.log("Elemento en la posición 1:", almacenCoches.obtenerElemento(0));
+console.log("Elemento en la posición 2:", almacenCoches.obtenerElemento(1));
+const almacenAlumnos = new almacen_1.default();
+almacenAlumnos.agregarElemento({ nombre: "Jose", edad: 16 });
+almacenAlumnos.agregarElemento({ nombre: "Marta", edad: 31 });
+almacenAlumnos.listarElementos();
+console.log("Elemento en la posición 1:", almacenAlumnos.obtenerElemento(0));
+console.log("Elemento en la posición 2:", almacenAlumnos.obtenerElemento(1));
