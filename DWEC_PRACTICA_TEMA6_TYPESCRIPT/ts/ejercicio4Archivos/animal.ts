@@ -1,39 +1,39 @@
 export default class Animal {
-    private nombre: string;
-    private edad: number;
-    private tipo: string;
+    private name: string;
+    private age: number;
+    private type: string;
 
-    constructor(nombre: string, edad: number, tipo: string) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.tipo = tipo;
+    constructor(name: string, age: number, type: string) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
     }
 
-    public getNombre(): string {
-        return this.nombre;
+    public getname(): string {
+        return this.name;
     }
 
-    public setNombre(nombre: string): void {
-        this.nombre = nombre;
+    public setname(name: string): void {
+        this.name = name;
     }
 
-    public getEdad(): number {
-        return this.edad;
+    public getage(): number {
+        return this.age;
     }
 
-    public setEdad(edad: number): void {
-        this.edad = edad;
+    public setage(age: number): void {
+        this.age = age;
     }
 
-    public getTipo(): string {
-        return this.tipo;
+    public gettype(): string {
+        return this.type;
     }
 
-    public setTipo(tipo: string): void {
-        this.tipo = tipo;
+    public settype(type: string): void {
+        this.type = type;
     }
 
-    public hacerRuido():string{
+    public toMakeNoise():string{
         return "Ruido del animal"
     }
 

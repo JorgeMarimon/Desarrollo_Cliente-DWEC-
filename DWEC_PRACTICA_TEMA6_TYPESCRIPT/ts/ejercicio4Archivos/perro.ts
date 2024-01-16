@@ -1,33 +1,33 @@
 import Animal from "./animal";
 
 export default class Perro extends Animal{
-    private raza:string
-    private adoptado:boolean
+    private breed:string
+    private adopted:boolean
 
-    constructor(nombre: string, edad: number, tipo: string, raza:string, adoptado:boolean){
-        super(nombre,edad,tipo);
-        this.raza=raza;
-        this.adoptado=adoptado;
+    constructor(name: string, age: number, type: string, breed:string, adopted:boolean){
+        super(name,age,type);
+        this.breed=breed;
+        this.adopted=adopted;
     }
 
-    public getRaza(): string {
-        return this.raza;
+    public getbreed(): string {
+        return this.breed;
     }
 
-    public setRaza(raza: string): void {
-        this.raza = raza;
+    public setbreed(breed: string): void {
+        this.breed = breed;
     }
 
-    public getAdoptado(): boolean {
-        return this.adoptado;
+    public getadopted(): boolean {
+        return this.adopted;
     }
 
-    public setAdoptado(adoptado: boolean): void {
-        this.adoptado = adoptado;
+    public setadopted(adopted: boolean): void {
+        this.adopted = adopted;
     }
 
-    public sit():string{
-        return this.getNombre+" se sienta."
+    public toSit():string{
+        return this.getname+" se sienta."
     }
 
 }

@@ -1,46 +1,46 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Laptop {
-    constructor(nombre, encendido, modelo) {
-        this.nombre = nombre;
-        this.encendido = encendido;
-        this.modelo = modelo;
+    constructor(name, on, model) {
+        this.name = name;
+        this.on = on;
+        this.model = model;
     }
-    getNombre() {
-        return this.nombre;
+    getname() {
+        return this.name;
     }
-    setNombre(nombre) {
-        this.nombre = nombre;
+    setname(name) {
+        this.name = name;
     }
-    getEncendido() {
-        return this.encendido;
+    geton() {
+        return this.on;
     }
-    setEncendido(encendido) {
-        this.encendido = encendido;
+    seton(on) {
+        this.on = on;
     }
-    getModelo() {
-        return this.modelo;
+    getmodel() {
+        return this.model;
     }
-    setModelo(modelo) {
-        this.modelo = modelo;
+    setmodel(model) {
+        this.model = model;
     }
-    encender() {
-        if (this.encendido = true) {
-            console.log("El dispositivo ya está encendido");
+    turnOn() {
+        if (this.on = true) {
+            console.log("El dispositivo ya está on");
         }
         else {
-            console.log("Dispositivo encendido");
+            console.log("Dispositivo on");
         }
     }
-    apagar() {
-        if (this.encendido = false) {
+    turnOff() {
+        if (this.on = false) {
             console.log("El dispositivo ya está apagado");
         }
         else {
             console.log("Dispositivo apagado");
         }
     }
-    abrirPrograma() {
+    toOpenProgramme() {
         console.log("Programa abierto");
     }
 }

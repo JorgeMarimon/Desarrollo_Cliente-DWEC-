@@ -5,25 +5,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const animal_1 = __importDefault(require("./animal"));
 class Perro extends animal_1.default {
-    constructor(nombre, edad, tipo, raza, adoptado) {
-        super(nombre, edad, tipo);
-        this.raza = raza;
-        this.adoptado = adoptado;
+    constructor(name, age, type, breed, adopted) {
+        super(name, age, type);
+        this.breed = breed;
+        this.adopted = adopted;
     }
-    getRaza() {
-        return this.raza;
+    getbreed() {
+        return this.breed;
     }
-    setRaza(raza) {
-        this.raza = raza;
+    setbreed(breed) {
+        this.breed = breed;
     }
-    getAdoptado() {
-        return this.adoptado;
+    getadopted() {
+        return this.adopted;
     }
-    setAdoptado(adoptado) {
-        this.adoptado = adoptado;
+    setadopted(adopted) {
+        this.adopted = adopted;
     }
-    sit() {
-        return this.getNombre + " se sienta.";
+    toSit() {
+        return this.getname + " se sienta.";
     }
 }
 exports.default = Perro;

@@ -1,46 +1,46 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Smartphone {
-    constructor(nombre, encendido, marca) {
-        this.nombre = nombre;
-        this.encendido = encendido;
-        this.marca = marca;
+    constructor(name, on, brand) {
+        this.name = name;
+        this.on = on;
+        this.brand = brand;
     }
-    getNombre() {
-        return this.nombre;
+    getname() {
+        return this.name;
     }
-    setNombre(nombre) {
-        this.nombre = nombre;
+    setname(name) {
+        this.name = name;
     }
-    getEncendido() {
-        return this.encendido;
+    geton() {
+        return this.on;
     }
-    setEncendido(encendido) {
-        this.encendido = encendido;
+    seton(on) {
+        this.on = on;
     }
-    getMarca() {
-        return this.marca;
+    getbrand() {
+        return this.brand;
     }
-    setMarca(marca) {
-        this.marca = marca;
+    setbrand(brand) {
+        this.brand = brand;
     }
-    encender() {
-        if (this.encendido = true) {
-            console.log("El dispositivo ya está encendido");
+    turnOn() {
+        if (this.on = true) {
+            console.log("El dispositivo ya está on");
         }
         else {
-            console.log("Dispositivo encendido");
+            console.log("Dispositivo on");
         }
     }
-    apagar() {
-        if (this.encendido = false) {
+    turnOff() {
+        if (this.on = false) {
             console.log("El dispositivo ya está apagado");
         }
         else {
             console.log("Dispositivo apagado");
         }
     }
-    llamar() {
+    toCall() {
         console.log("Teléfono sonando");
     }
 }

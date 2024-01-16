@@ -2,69 +2,69 @@
 /**
  * Crea un nuevo archivo TS, llamado empleado.ts. En este se definirá una clase Employee con las
  *  siguientes características:
- * Tendrá varios atributos: nombre, apellido, edad, fecha de inicio del trabajo, una fecha de finalización
+ * Tendrá varios atributos: name, surname, age, fecha de inicio del trabajo, una fecha de finalización
  * (podrá ser nula) y la profesión.
  * Crea su constructor.
  * Crea los métodos get y set para cada uno de los atributos.
  * Crea dos empleados, uno que tenga fecha de finalización y otro que no la tenga ya que continúa
- * trabajando, pinta por consola el nombre y la edad de cada uno de ellos.
+ * trabajando, pinta por consola el name y la age de cada uno de ellos.
  */
 class Employee {
-    constructor(nombre, apellido, edad, fechaInicioTrabajo, fechaFinTrabajo, profesion) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.fechaInicioTrabajo = fechaInicioTrabajo;
-        this.fechaFinTrabajo = fechaFinTrabajo;
-        this.profesion = profesion;
+    constructor(name, surname, age, initialJobDate, finishJobDate, job) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.initialJobDate = initialJobDate;
+        this.finishJobDate = finishJobDate;
+        this.job = job;
     }
     ;
-    getnombre() {
-        return this.nombre;
+    getname() {
+        return this.name;
     }
-    setnombre(value) {
-        this.nombre = value;
+    setname(value) {
+        this.name = value;
     }
-    getapellido() {
-        return this.apellido;
+    getsurname() {
+        return this.surname;
     }
-    setapellido(value) {
-        this.apellido = value;
+    setsurname(value) {
+        this.surname = value;
     }
-    getedad() {
-        return this.edad;
+    getage() {
+        return this.age;
     }
-    setedad(value) {
-        this.edad = value;
+    setage(value) {
+        this.age = value;
     }
-    getfechaInicioTrabajo() {
-        return this.fechaInicioTrabajo;
+    getinitialJobDate() {
+        return this.initialJobDate;
     }
-    setfechaInicioTrabajo(value) {
-        this.fechaInicioTrabajo = value;
+    setinitialJobDate(value) {
+        this.initialJobDate = value;
     }
-    getfechaFinTrabajo() {
-        return this.fechaFinTrabajo;
+    getfinishJobDate() {
+        return this.finishJobDate;
     }
-    setfechaFinTrabajo(value) {
-        this.fechaFinTrabajo = value;
+    setfinishJobDate(value) {
+        this.finishJobDate = value;
     }
-    getprofesion() {
-        return this.profesion;
+    getjob() {
+        return this.job;
     }
-    setprofesion(value) {
-        this.profesion = value;
+    setjob(value) {
+        this.job = value;
     }
-    imprimir() {
-        if (this.fechaFinTrabajo) {
-            console.log("El nombre del empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Acabó de trabajar en el " + this.fechaFinTrabajo + ".");
+    toPrint() {
+        if (this.finishJobDate) {
+            console.log("El name del empleado es " + this.name + " " + this.surname + ". Su age es de " + this.age + " años. Empezó a trabajar como " + this.job + " en el " + this.initialJobDate + ". Acabó de trabajar en el " + this.finishJobDate + ".");
         }
         else {
-            console.log("El nombre del empleado es " + this.nombre + " " + this.apellido + ". Su edad es de " + this.edad + " años. Empezó a trabajar como " + this.profesion + " en el " + this.fechaInicioTrabajo + ". Sigue en activo.");
+            console.log("El name del empleado es " + this.name + " " + this.surname + ". Su age es de " + this.age + " años. Empezó a trabajar como " + this.job + " en el " + this.initialJobDate + ". Sigue en activo.");
         }
     }
 }
-var empleado1 = new Employee("Jorge", "Marimón", 35, new Date('03/01/2009'), null, "Programador");
-var empleado2 = new Employee("Francis", "Marimón", 34, new Date('15/01/2012'), new Date('03/01/2023'), "Comercial");
-empleado1.imprimir();
-empleado2.imprimir();
+var employee1 = new Employee("Jorge", "Marimón", 35, new Date('03/01/2009'), null, "Programador");
+var employee2 = new Employee("Francis", "Marimón", 34, new Date('15/01/2012'), new Date('03/01/2023'), "Comercial");
+employee1.toPrint();
+employee2.toPrint();

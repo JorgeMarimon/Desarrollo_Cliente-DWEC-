@@ -1,50 +1,50 @@
 import DispositivoElectronico from "./interface";
 
 export default class Smartphone implements DispositivoElectronico {
-    constructor(public nombre: string, public encendido: boolean, public marca: string) {
+    constructor(public name: string, public on: boolean, public brand: string) {
     }
 
-    public getNombre(): string {
-        return this.nombre;
+    public getname(): string {
+        return this.name;
     }
 
-    public setNombre(nombre: string): void {
-        this.nombre = nombre;
+    public setname(name: string): void {
+        this.name = name;
     }
 
-    public getEncendido(): boolean {
-        return this.encendido;
+    public geton(): boolean {
+        return this.on;
     }
 
-    public setEncendido(encendido: boolean): void {
-        this.encendido = encendido;
+    public seton(on: boolean): void {
+        this.on = on;
     }
 
-    public getMarca(): string {
-        return this.marca;
+    public getbrand(): string {
+        return this.brand;
     }
 
-    public setMarca(marca: string): void {
-        this.marca = marca;
+    public setbrand(brand: string): void {
+        this.brand = brand;
     }
 
-    encender() {
-        if (this.encendido = true) {
-            console.log("El dispositivo ya está encendido")
+    turnOn() {
+        if (this.on = true) {
+            console.log("El dispositivo ya está on")
         } else {
-            console.log("Dispositivo encendido")
+            console.log("Dispositivo on")
         }
     }
 
-    apagar() {
-        if (this.encendido = false) {
+    turnOff() {
+        if (this.on = false) {
             console.log("El dispositivo ya está apagado")
         } else {
             console.log("Dispositivo apagado")
         }
     }
 
-    llamar() {
+    toCall() {
         console.log("Teléfono sonando")
     }
 }

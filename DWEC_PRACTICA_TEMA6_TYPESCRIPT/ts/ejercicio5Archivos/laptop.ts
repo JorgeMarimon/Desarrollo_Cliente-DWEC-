@@ -1,51 +1,51 @@
 import DispositivoElectronico from "./interface";
 
 export default class Laptop implements DispositivoElectronico {
-    constructor(public nombre: string, public encendido: boolean, public modelo: string) {
+    constructor(public name: string, public on: boolean, public model: string) {
 
     }
 
-    public getNombre(): string {
-        return this.nombre;
+    public getname(): string {
+        return this.name;
     }
 
-    public setNombre(nombre: string): void {
-        this.nombre = nombre;
+    public setname(name: string): void {
+        this.name = name;
     }
 
-    public getEncendido(): boolean {
-        return this.encendido;
+    public geton(): boolean {
+        return this.on;
     }
 
-    public setEncendido(encendido: boolean): void {
-        this.encendido = encendido;
+    public seton(on: boolean): void {
+        this.on = on;
     }
 
-    public getModelo(): string {
-        return this.modelo;
+    public getmodel(): string {
+        return this.model;
     }
 
-    public setModelo(modelo: string): void {
-        this.modelo = modelo;
+    public setmodel(model: string): void {
+        this.model = model;
     }
 
-    encender() {
-        if (this.encendido = true) {
-            console.log("El dispositivo ya está encendido")
+    turnOn() {
+        if (this.on = true) {
+            console.log("El dispositivo ya está on")
         } else {
-            console.log("Dispositivo encendido")
+            console.log("Dispositivo on")
         }
     }
 
-    apagar() {
-        if (this.encendido = false) {
+    turnOff() {
+        if (this.on = false) {
             console.log("El dispositivo ya está apagado")
         } else {
             console.log("Dispositivo apagado")
         }
     }
 
-    abrirPrograma() {
+    toOpenProgramme() {
         console.log("Programa abierto")
     }
 }

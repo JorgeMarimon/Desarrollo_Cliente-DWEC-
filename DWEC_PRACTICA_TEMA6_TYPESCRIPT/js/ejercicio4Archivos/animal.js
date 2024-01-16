@@ -1,30 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Animal {
-    constructor(nombre, edad, tipo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.tipo = tipo;
+    constructor(name, age, type) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
     }
-    getNombre() {
-        return this.nombre;
+    getname() {
+        return this.name;
     }
-    setNombre(nombre) {
-        this.nombre = nombre;
+    setname(name) {
+        this.name = name;
     }
-    getEdad() {
-        return this.edad;
+    getage() {
+        return this.age;
     }
-    setEdad(edad) {
-        this.edad = edad;
+    setage(age) {
+        this.age = age;
     }
-    getTipo() {
-        return this.tipo;
+    gettype() {
+        return this.type;
     }
-    setTipo(tipo) {
-        this.tipo = tipo;
+    settype(type) {
+        this.type = type;
     }
-    hacerRuido() {
+    toMakeNoise() {
         return "Ruido del animal";
     }
 }

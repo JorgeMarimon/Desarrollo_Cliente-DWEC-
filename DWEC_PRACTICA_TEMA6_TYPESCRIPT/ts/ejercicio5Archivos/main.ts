@@ -4,10 +4,10 @@ import Smartphone from "./smartphone";
 var laptop:Laptop=new Laptop("lenovo", true,"Yoga");
 var smartphone:Smartphone=new Smartphone("GT3",false,"Huawei")
 
-laptop.abrirPrograma();
-laptop.encender();
-laptop.apagar();
+laptop.toOpenProgramme();
+laptop.turnOn();
+laptop.turnOff();
 
-smartphone.apagar();
-smartphone.encender();
-smartphone.llamar();
+smartphone.turnOff();
+smartphone.turnOn();
+smartphone.toCall();

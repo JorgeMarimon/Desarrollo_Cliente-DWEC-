@@ -8,7 +8,7 @@ var perro:Perro=new Perro("Jero",14,"perro","mestizo",true)
 var pajaro:Pajaro=new Pajaro("Perico",3,"pajaro","canario",true,77)
 var pajaro2:Pajaro=new Pajaro("Ramoncín",6,"pajaro","loro",false)
 
-console.log(gato.hacerRuido());
-console.log(perro.sit());
-console.log(pajaro.rastrearPajaro())
-console.log(pajaro2.rastrearPajaro())
+console.log(gato.toMakeNoise());
+console.log(perro.toSit());
+console.log(pajaro.toSearchBird())
+console.log(pajaro2.toSearchBird())

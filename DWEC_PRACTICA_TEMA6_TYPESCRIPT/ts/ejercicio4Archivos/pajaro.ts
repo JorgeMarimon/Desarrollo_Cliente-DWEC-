@@ -1,31 +1,31 @@
 import Animal from "./animal";
 
 export default class Pajaro extends Animal {
-    private raza: string
-    private localizador: boolean
+    private breed: string
+    private locator: boolean
     private id?: number
 
-    constructor(nombre: string, edad: number, tipo: string, raza: string, localizador: boolean, id?: number) {
-        super(nombre, edad, tipo);
-        this.raza = raza;
-        this.localizador = localizador;
+    constructor(name: string, age: number, type: string, breed: string, locator: boolean, id?: number) {
+        super(name, age, type);
+        this.breed = breed;
+        this.locator = locator;
         this.id = id;
     }
 
-    public getRaza(): string {
-        return this.raza;
+    public getbreed(): string {
+        return this.breed;
     }
 
-    public setRaza(raza: string): void {
-        this.raza = raza;
+    public setbreed(breed: string): void {
+        this.breed = breed;
     }
 
-    public getLocalizador(): boolean {
-        return this.localizador;
+    public getlocator(): boolean {
+        return this.locator;
     }
 
-    public setlocalizador(localizador: boolean): void {
-        this.localizador = localizador;
+    public setlocator(locator: boolean): void {
+        this.locator = locator;
     }
 
     public getId(): number|undefined {
@@ -37,11 +37,11 @@ export default class Pajaro extends Animal {
     }
 
     public sit(): string {
-        return this.getNombre() + " se sienta."
+        return this.getname() + " se sienta."
     }
 
-    public rastrearPajaro(): string {
-        if (this.localizador) {
+    public toSearchBird(): string {
+        if (this.locator) {
             return "El pájaro se puede rastrear. Su ID de rastreo es: " + this.id
         } else {
             return "El pájaro no posee un rastreador. Se recomienda añadir uno primero."

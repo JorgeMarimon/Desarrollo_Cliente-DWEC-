@@ -5,23 +5,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const animal_1 = __importDefault(require("./animal"));
 class Pajaro extends animal_1.default {
-    constructor(nombre, edad, tipo, raza, localizador, id) {
-        super(nombre, edad, tipo);
-        this.raza = raza;
-        this.localizador = localizador;
+    constructor(name, age, type, breed, locator, id) {
+        super(name, age, type);
+        this.breed = breed;
+        this.locator = locator;
         this.id = id;
     }
-    getRaza() {
-        return this.raza;
+    getbreed() {
+        return this.breed;
     }
-    setRaza(raza) {
-        this.raza = raza;
+    setbreed(breed) {
+        this.breed = breed;
     }
-    getLocalizador() {
-        return this.localizador;
+    getlocator() {
+        return this.locator;
     }
-    setlocalizador(localizador) {
-        this.localizador = localizador;
+    setlocator(locator) {
+        this.locator = locator;
     }
     getId() {
         return this.id;
@@ -30,10 +30,10 @@ class Pajaro extends animal_1.default {
         this.id = id;
     }
     sit() {
-        return this.getNombre() + " se sienta.";
+        return this.getname() + " se sienta.";
     }
-    rastrearPajaro() {
-        if (this.localizador) {
+    toSearchBird() {
+        if (this.locator) {
             return "El pájaro se puede rastrear. Su ID de rastreo es: " + this.id;
         }
         else {
