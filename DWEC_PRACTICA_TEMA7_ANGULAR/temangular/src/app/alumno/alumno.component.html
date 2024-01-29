@@ -27,6 +27,9 @@
             <th>
                 LinkedIn
             </th>
+            <th>
+                Ausencias
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -57,12 +60,15 @@
             <td>
                 {{alum.linkedin}}
             </td>
+            <td>
+                <p *ngIf="alum.diasFaltas>0; else noFalta">Días faltados en total: {{alum.diasFaltas}}</p>
+                <ng-template #noFalta>
+                    <p>No ha faltado nunca</p>
+                </ng-template>
+                <button type="button" class="btn btn-success" (click)="aumentasDias(alum)">Añadir día</button>
+                <button *ngIf="alum.diasFaltas>0" type="button" class="btn btn-danger"
+                    (click)="disminuirDias(alum)">Disminuiur día</button>
+            </td>
         </tr>
     </tbody>
 </table>
-
-<!--<button type="button" class="btn btn-primary" (click)="crearCorreo()">Generar email</button>-->
-<!--<h4 *ngIf="alumno.diasFaltas>0; else noFalta">Días faltados en total: {{alumno.diasFaltas}}</h4>
-<ng-template #noFalta><p>No ha faltado nunca</p></ng-template>
-<button type="button" class="btn btn-success" (click)="aumentasDias()">Añadir día</button>
-<button *ngIf="alumno.diasFaltas>0" type="button" class="btn btn-danger" (click)="disminuirDias()">Disminuiur día</button>--->

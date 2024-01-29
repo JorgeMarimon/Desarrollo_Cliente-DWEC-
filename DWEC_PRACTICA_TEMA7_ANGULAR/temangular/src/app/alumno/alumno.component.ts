@@ -7,7 +7,6 @@ import { Alumno } from '../models/alumno.models';
   styleUrl: './alumno.component.css'
 })
 export class AlumnoComponent {
-  //alumno: Alumno = new Alumno('Jorge', 'Marimón', 35,'',[9,10,9,8,7.9,9.4],true,'https://www.linkedin.com/in/jorgemarimon/',0 );
   alumnos: Alumno[] = [
     new Alumno('Jorge', 'Marimón', 35, [9, 10, 9, 8, 7.9, 9.4], true, 'https://www.linkedin.com/in/jorgemarimon/', 0),
     new Alumno('Marta', 'Marimón', 31, [5, 6, 9, 7, 2.9, 9.4], true, 'https://www.linkedin.com/in/martamarimon/', 0),
@@ -24,22 +23,13 @@ export class AlumnoComponent {
     return parseFloat((sumaNotas / alum.notas.length).toFixed(2));
   }
 
-
-
-
-
-
-
-  /*aumentasDias(): void {
-    this.alumno.diasFaltas++;
+  aumentasDias(alum: Alumno): void {
+    alum.diasFaltas++;
   }
-  disminuirDias(): void {
-    if (this.alumno.diasFaltas > 0) {
-      this.alumno.diasFaltas--;
+  disminuirDias(alum: Alumno): void {
+    if (alum.diasFaltas > 0) {
+      alum.diasFaltas--;
     }
-  }*/
-  /*crearCorreo(): void {
-    this.alumno.email = this.alumno.nombre + "_" + this.alumno.apellido + "@alu.medac.es"
-  }*/
+  }
 
 }
