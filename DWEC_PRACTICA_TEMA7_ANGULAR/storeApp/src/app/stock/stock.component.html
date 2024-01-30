@@ -1,0 +1,67 @@
+<header class="bg-dark text-center">
+    <div class="container py-2">
+        <h3 class="text-white my-2">
+            Product Stock
+        </h3>
+    </div>
+</header>
+
+<ng-template #Empty>
+    <h2>Sorry, there are no products</h2>
+</ng-template>
+<table class="table table-bordered table-striped" *ngIf="products.length>0; else Empty">
+    <thead>
+        <tr class="table-primary">
+            <th scope="col">Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th colspan="2" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" class="table-light">
+            <td>{{product.code}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}€</td>
+            <td><button class="btn btn-primary" (click)="selectProduct(this.product)">Select</button></td>
+            <td><button class="btn btn-danger" (click)="deleteProduct(this.product)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<form class="row g-3 justify-content-center" #productForm="ngForm">
+    <div class="col-md-6">
+        <label for="inputCode" class="form-label">Code</label>
+        <input type="text" class="form-control" id="inputCode" [(ngModel)]="newProduct.code" name="code" required>
+    </div>
+    <div class="col-md-6">
+        <label for="inputDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="inputDescription" [(ngModel)]="newProduct.description"
+            name="description" required>
+    </div>
+    <div class="col-md-6">
+        <label for="inputQuantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="inputQuantity" [(ngModel)]="newProduct.quantity" name="quantity"
+            required>
+    </div>
+    <div class="col-md-6">
+        <label for="inputPrice" class="form-label">Price</label>
+        <input type="number" class="form-control" id="inputPrice" [(ngModel)]="newProduct.price" name="price" required>
+    </div>
+    <div class="col-4">
+        <button type="submit" class="btn btn-success" (click)="toAdd()">Add Product</button>
+    </div>
+    <div class="col-4">
+        <button type="button" class="btn btn-warning" (click)="modify()">Product Modify</button>
+    </div>
+</form>
+
+<footer class="footer bg-dark text-center mt-2">
+    <div class="container py-2">
+        <p class="text-white my-2">
+            &copy; Jorge Marimón Moreno
+        </p>
+    </div>
+</footer>

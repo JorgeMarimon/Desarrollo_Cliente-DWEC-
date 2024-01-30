@@ -1,0 +1,17 @@
+form {
+    max-width: 30rem;
+    border: 1px solid black;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+form div {
+    padding: 1rem;
+}
+
+form button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 9rem;
+}
