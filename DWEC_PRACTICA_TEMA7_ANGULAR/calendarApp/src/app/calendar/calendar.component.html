@@ -1,0 +1,132 @@
+<ng-template #Empty>
+  <h2>There are no task</h2>
+</ng-template>
+
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-8 text-center">
+      <button data-bs-toggle="modal" data-bs-target="#modalNewTask" data-bs-whatever="@mdo"
+      class="btn btn-warning col-5" class="btn btn-success addTask">
+        <h3>ADD NEW TASK</h3>
+      </button>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let t of tasks" class="col-10 col-md-5 col-lg-3">
+      <div class="card" style="width: 18rem;" *ngIf="tasks.length>0; else Empty">
+        <div class="card-body">
+          <h3 class="card-title">{{t.name}}</h3>
+          <p class="card-text"><strong>{{t.description}}</strong></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Date of start: <span><strong>{{t.startDate | date:'short'}}</strong></span></li>
+          <li class="list-group-item">Date of end: <span><strong>{{t.endDate | date:'short'}}</strong></span></li>
+          <li class="list-group-item">Subject: <span><strong>{{t.subject}}</strong> </span></li>
+          <li class="list-group-item">Responsable: <span><strong>{{t.assignedPerson}}</strong></span></li>
+        </ul>
+        <div class="card-body row justify-content-evenly">
+          <p class="col-6">Aprx time: <span>{{t.estimatedTime}}</span> h.</p>
+          <p class="col-6">Real time: <span>{{t.realTime}}</span> h.</p>
+        </div>
+        <div class="card-body row justify-content-evenly">
+          <button class="btn btn-primary col-10" (click)="startTask(this.t)">Start Task</button>
+          <button class="btn btn-info col-10" (click)="finishTask(this.t)">End Task</button>
+        </div>
+        <div class="card-body row justify-content-evenly">
+          <button data-bs-toggle="modal" data-bs-target="#modalEdite" data-bs-whatever="@mdo"
+            class="btn btn-warning col-5" (click)="editeTask(this.t)">Edite Task</button>
+          <button class="btn btn-danger col-5" (click)="deleteTask(this.t)">Delete Task</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalEdite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit your task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row justify-content-evenly">
+          <div class="mb-3 col-12">
+            <label for="recipient-name" class="col-form-label">Task name:</label>
+            <input type="text" class="form-control" id="recipient-name" [(ngModel)]="newTask.name" name="name">
+          </div>
+          <div class="mb-3 col-12">
+            <label for="description-text" class="col-form-label">Description:</label>
+            <textarea class="form-control" id="description-text" [(ngModel)]="newTask.description" name="description"></textarea>
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-startDate" class="col-form-label">Start date:</label>
+            <input type="text" class="form-control" id="recipient-startDate" [(ngModel)]="newTask.startDate" name="startDate">
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-endDate" class="col-form-label">End date:</label>
+            <input type="text" class="form-control" id="recipient-endDate" [(ngModel)]="newTask.endDate" name="endDate">
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-subject" class="col-form-label">Subject:</label>
+            <input type="text" class="form-control" id="recipient-subject" [(ngModel)]="newTask.subject" name="subject">
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-person" class="col-form-label">Responsable:</label>
+            <input type="text" class="form-control" id="recipient-person" [(ngModel)]="newTask.assignedPerson" name="assignedPerson">
+          </div>
+          <div class="mb-3 col-12">
+            <label for="recipient-time" class="col-form-label">Estimated time:</label>
+            <input type="text" class="form-control" id="recipient-time" [(ngModel)]="newTask.estimatedTime" name="estimatedTime">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateTask()">Update task</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalNewTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add your task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row justify-content-evenly">
+          <div class="mb-3 col-12">
+            <label for="recipient-name" class="col-form-label">Task name:</label>
+            <input type="text" class="form-control" id="recipient-name" [(ngModel)]="newTask.name" name="name" required>
+          </div>
+          <div class="mb-3 col-12">
+            <label for="description-text" class="col-form-label">Description:</label>
+            <textarea class="form-control" id="description-text" [(ngModel)]="newTask.description" name="description" required></textarea>
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-subject" class="col-form-label">Subject:</label>
+            <input type="text" class="form-control" id="recipient-subject" [(ngModel)]="newTask.subject" name="subject" required>
+          </div>
+          <div class="mb-3 col-6">
+            <label for="recipient-person" class="col-form-label">Responsable:</label>
+            <input type="text" class="form-control" id="recipient-person" [(ngModel)]="newTask.assignedPerson" name="assignedPerson" required>
+          </div>
+          <div class="mb-3 col-12">
+            <label for="recipient-time" class="col-form-label">Estimated time:</label>
+            <input type="text" class="form-control" id="recipient-time" [(ngModel)]="newTask.estimatedTime" name="estimatedTime" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addTask()">Add task</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.card {
+    background-color: var(--colorFondo);
+    border: 1px solid var(--colorBorde);
+    border-radius: 50px;
+    max-width: 320px;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+        0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    max-height: 550px;
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2),
+        0 17px 50px rgba(0, 0, 0, 0.19);
+}
+
+.card-text, .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  /* Evita el salto de línea del texto */
+
+  }
+
+.btn{
+    margin-bottom: 3px;
+}
+
+.addTask{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

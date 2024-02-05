@@ -36,7 +36,7 @@ export class StockComponent {
       this.products.push(this.newProduct);
       this.newProduct = new Product('', '', 0, 0);
     } else {
-      alert('El código no es único, es igual a "0" o es inexistente.');
+      alert('The code is not unique, equals "0" or is non-existent.');
     }
   }
 
@@ -47,9 +47,9 @@ export class StockComponent {
       this.products[productIndex].description = this.newProduct.description
       this.products[productIndex].quantity = this.newProduct.quantity
       this.products[productIndex].price = this.newProduct.price
-      alert('Producto ' + codeFound.code + ' modificado')
+      alert('Product ' + codeFound.code + ' modified')
     } else {
-      alert('El código no coincide con ningún artículo de la base de datos')
+      alert('The code does not match any item in the database.')
     }
   }
 
