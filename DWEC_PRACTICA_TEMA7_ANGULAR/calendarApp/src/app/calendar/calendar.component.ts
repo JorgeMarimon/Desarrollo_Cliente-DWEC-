@@ -112,6 +112,7 @@ export class CalendarComponent {
 
   //LAS DOS SIGUIENTES FUNCIONES SIRVEN PARA EDITAR DATOS
   editeTask(task: Task): void {
+    
     this.newTask = { ...task }
   }
   updateTask(): void {

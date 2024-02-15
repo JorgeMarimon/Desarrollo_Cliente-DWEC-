@@ -1,0 +1,25 @@
+<h3>Ofertas de cursos</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Duración
+            </th>
+            <th>
+                Precio
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let curso of cursos">
+            <td>{{curso.nombre}}</td>
+            <td>{{curso.duracion}}</td>
+            <td>{{curso.precio}}€</td>
+        </tr>
+    </tbody>
+
+</table>

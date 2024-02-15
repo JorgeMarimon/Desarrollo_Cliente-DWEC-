@@ -1,0 +1,47 @@
+{
+    "ofertas": [
+      {
+        "nombre": "Agricultor",
+        "duracion": "Indefinido",
+        "salario": 25000
+      },
+      {
+        "nombre": "Programador",
+        "duracion": "Indefinido",
+        "salario": 50000
+      },
+      {
+        "nombre": "Diseñador Gráfico",
+        "duracion": "12 meses",
+        "salario": 35000
+      },
+      {
+        "nombre": "Ingeniero Civil",
+        "duracion": "Indefinido",
+        "salario": 60000
+      }
+    ],
+    "cursos": [
+      {
+        "nombre": "Coaching Motivacional",
+        "duracion": "4 semanas",
+        "precio": 99.99
+      },
+      {
+        "nombre": "Desarrollo Web",
+        "duracion": "6 meses",
+        "precio": 299.99
+      },
+      {
+        "nombre": "Marketing Digital",
+        "duracion": "3 meses",
+        "precio": 199.99
+      },
+      {
+        "nombre": "Gestión de Proyectos",
+        "duracion": "8 semanas",
+        "precio": 149.99
+      }
+    ]
+  }
+  
